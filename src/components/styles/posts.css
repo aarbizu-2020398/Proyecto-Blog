@@ -1,0 +1,32 @@
+/* posts.css */
+
+h3 {
+    color: #8E1616;  /* Granate */
+    margin-bottom: 20px;
+}
+
+.post-card {
+    background-color: #E8C999;  /* Beige */
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.post-card:hover {
+    transform: translateY(-5px);
+}
+
+.post-card h4 {
+    color: #8E1616;  /* Granate */
+}
+
+.post-card p {
+    color: #000000;  /* Negro */
+}
+
+strong {
+    color: #8E1616;  /* Granate */
+}

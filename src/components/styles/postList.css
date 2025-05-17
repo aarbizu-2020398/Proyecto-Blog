@@ -1,0 +1,37 @@
+/* postList.css */
+
+/* Contenedor de las publicaciones */
+.post-list {
+    padding: 20px;
+}
+
+.post-card {
+    background-color: var(--beige);
+    color: var(--black);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.post-card h2 {
+    color: var(--maroon);
+}
+
+.post-card p {
+    color: var(--black);
+}
+
+.post-card .date {
+    color: var(--warm);
+    font-size: 14px;
+}
+
+.post-card:hover {
+    background-color: var(--warm);
+    cursor: pointer;
+}
+
+.post-card:hover h2 {
+    color: var(--black);
+}

@@ -1,0 +1,31 @@
+/* styles.css */
+
+/* Colores generales */
+:root {
+    --black: #000000;
+    --maroon: #8E1616;
+    --beige: #E8C999;
+    --warm: #F8EEDF;
+}
+
+/* General */
+body {
+    background-color: var(--black);
+    color: var(--warm);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3 {
+    color: var(--maroon); /* Títulos en granate */
+}
+
+a {
+    color: var(--beige);  /* Enlaces en beige */
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--maroon); /* Enlaces hover en granate */
+}

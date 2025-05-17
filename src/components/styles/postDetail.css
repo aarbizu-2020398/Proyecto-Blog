@@ -1,0 +1,52 @@
+/* postDetail.css */
+.post-detail-container {
+  padding: 30px;
+  background-color: #F8EEDF;
+  max-width: 900px;
+  margin: 0 auto;
+  border-radius: 8px;
+}
+
+.post-detail-container h2 {
+  font-size: 36px;
+  color: #8E1616;
+  text-transform: uppercase;
+}
+
+.comment-card {
+  background-color: #E8C999;
+  padding: 20px;
+  border-radius: 8px;
+  margin: 10px 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.comment-card p {
+  font-size: 16px;
+}
+
+button {
+  padding: 12px 20px;
+  background-color: #8E1616;
+  color: white;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #E8C999;
+}
+
+textarea, input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin: 10px 0;
+}
+
+textarea {
+  height: 100px;
+}

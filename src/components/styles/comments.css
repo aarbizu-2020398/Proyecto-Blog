@@ -1,0 +1,45 @@
+/* comments.css */
+
+h3 {
+    color: #8E1616;  /* Granate */
+    margin-bottom: 20px;
+}
+
+.comment-list {
+    margin-top: 10px;
+}
+
+.comment-card {
+    background-color: #E8C999;  /* Beige */
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.comment-card p {
+    color: #000000;  /* Negro */
+}
+
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #8E1616;  /* Granate */
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button {
+    background-color: #8E1616;  /* Granate */
+    color: #F8EEDF;  /* Blanco cálido */
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #000000;  /* Negro */
+}

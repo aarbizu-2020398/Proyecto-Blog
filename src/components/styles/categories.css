@@ -1,0 +1,20 @@
+/* categories.css */
+
+h3 {
+    color: #8E1616;  /* Granate */
+    margin-bottom: 20px;
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #8E1616;  /* Granate */
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #F8EEDF;  /* Fondo cálido */
+    margin-bottom: 20px;
+}
+
+option {
+    padding: 10px;
+}
