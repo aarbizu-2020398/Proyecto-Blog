@@ -1,21 +1,20 @@
-// src/api.js
 import axios from 'axios';
-import { getPostById } from '../api';
-const api = axios.create({ baseURL: '/api' });
 
-// Posts
-export const fetchPosts       = () => api.get('/posts');
-export const createPost       = data => api.post('/posts', data);
-export const updatePost       = (id, data) => api.put(`/posts/${id}`, data);
-export const deletePost       = id => api.delete(`/posts/${id}`);
+const API = axios.create({
+  baseURL: import.meta.env.VITE_API_URL || 'http://localhost:3000/Blog'
+});
 
-// Categories
-export const fetchCategories  = () => api.get('/categories');
-export const createCategory   = data => api.post('/categories', data);
-export const updateCategory   = (id, data) => api.put(`/categories/${id}`, data);
-export const deleteCategory   = id => api.delete(`/categories/${id}`);
+export const getCategories = () =>
+  API.get('/categories');
 
-// Comments
-export const fetchComments    = postId => api.get(postId ? `/posts/${postId}/comments` : '/comments');
-export const createComment    = (postId, data) => api.post(`/posts/${postId}/comments`, data);
-export const deleteComment    = (postId, commentId) => api.delete(`/posts/${postId}/comments/${commentId}`);
+export const getPublications = (course) =>
+  API.get('/publications', { params: course ? { course } : {} });
+
+export const getPublicationById = (id) =>
+  API.get(`/publications/${id}`);
+
+export const getComments = (pubId) =>
+  API.get(`/publications/${pubId}/comments`);
+
+export const addComment = (pubId, data) =>
+  API.post(`/publications/${pubId}/comments`, data);

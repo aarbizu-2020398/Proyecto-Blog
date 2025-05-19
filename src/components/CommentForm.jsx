@@ -1,40 +1,32 @@
-import React, { useState } from 'react';
-import axios from 'axios';
-import './styles/commentForm.css';
+import { useState } from 'react';
 
-function CommentForm({ postId }) {
-    const [author, setAuthor] = useState('');
-    const [content, setContent] = useState('');
+export default function CommentForm({ onSubmit }) {
+  const [author, setAuthor] = useState('');
+  const [content, setContent] = useState('');
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        axios.post('/api/comments', { postId, author, content })
-            .then(response => {
-                setAuthor('');
-                setContent('');
-                alert('Comentario agregado!');
-            })
-            .catch(error => console.error('Error al agregar comentario:', error));
-    };
+  const handle = async (e) => {
+    e.preventDefault();
+    if (!author || !content) return;
+    const ok = await onSubmit({ author, content });
+    if (ok) {
+      setAuthor('');
+      setContent('');
+    }
+  };
 
-    return (
-        <form onSubmit={handleSubmit} className="comment-form">
-            <input 
-                type="text" 
-                value={author} 
-                onChange={(e) => setAuthor(e.target.value)} 
-                placeholder="Tu nombre" 
-                required 
-            />
-            <textarea 
-                value={content} 
-                onChange={(e) => setContent(e.target.value)} 
-                placeholder="Escribe tu comentario..." 
-                required 
-            />
-            <button type="submit" className="btn add-comment-btn">Agregar Comentario</button>
-        </form>
-    );
+  return (
+    <form onSubmit={handle} className="comment-form">
+      <input
+        placeholder="Nombre"
+        value={author}
+        onChange={e => setAuthor(e.target.value)}
+      />
+      <textarea
+        placeholder="Comentario"
+        value={content}
+        onChange={e => setContent(e.target.value)}
+      />
+      <button>Enviar</button>
+    </form>
+  );
 }
-
-export default CommentForm;
